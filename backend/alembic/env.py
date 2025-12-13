@@ -1,4 +1,4 @@
-from logging.config import fileConfig
+# from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 from alembic import context
 from app.core.config import get_settings
@@ -15,7 +15,7 @@ settings = get_settings()
 config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
 
 # Interpret alembic.ini logging config
-fileConfig(config.config_file_name)
+# fileConfig(config.config_file_name)
 
 # Target metadata for migrations
 target_metadata = Base.metadata
