@@ -11,4 +11,5 @@ pydantic-settings
 pytest
 pytest-asyncio
 httpx
-bcrypt
+bcrypt==3.2.0
+email-validator
