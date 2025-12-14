@@ -190,5 +190,5 @@ How I Used AI
 My Reflection on AI Usage
 
 AI significantly accelerated development by reducing time spent on repetitive boilerplate and debugging.
-However, all AI-generated code was reviewed, modified, and validated manually to ensure correctness, security, and alignment with project requirements.
+However, all AI-generated code was reviewed, modified, and validated manually to ensure correctness, security, and alignment with project requirements
 I treated AI as a collaborative assistant, not a replacement for engineering judgment.
