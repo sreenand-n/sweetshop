@@ -57,6 +57,7 @@ Frontend
 Project Structure
 -----------------
 
+```text
 sweetshop/
 │
 ├── backend/
@@ -98,51 +99,65 @@ sweetshop/
 └── .gitignore
 
 
+
+## Setup & Run Locally
+
+```text
 Setup & Run Locally
--------------------
+------------------
 
 1. Backend Setup
-    cd backend
-    python -m venv venv
-    source venv/bin/activate   # Windows: venv\Scripts\activate
-    pip install -r requirements.txt
-
-    Configure database in .env (example):
-        DATABASE_URL=sqlite:///./test.db
-        SECRET_KEY=your_secret_key
-
-    Run backend:
-        uvicorn app.main:app --reload
-
-        Backend runs at: http://127.0.0.1:8000
-        
-        Swagger Docs: http://127.0.0.1:8000/docs
-        
+│
+│   cd backend
+│   python -m venv venv
+│   source venv/bin/activate   # Windows: venv\Scripts\activate
+│   pip install -r requirements.txt
+│
+│   Configure database in .env (example):
+│       DATABASE_URL=sqlite:///./test.db
+│       SECRET_KEY=your_secret_key
+│
+│   Run backend:
+│       uvicorn app.main:app --reload
+│
+│   Backend runs at: http://127.0.0.1:8000
+│
+│   Swagger Docs: http://127.0.0.1:8000/docs
+│
 2. Frontend Setup
+│
+│   cd frontend
+│   npm install
+│   npm run dev
+│
+│   Frontend runs at: http://localhost:5173
+```
 
-    cd frontend
-    npm install
-    npm run dev
 
-    Frontend runs at: http://localhost:5173
-    
 
+## Test Report
+
+```text
 Test Report
 -----------
 
 Backend Tests
-    Tests were written following Test-Driven Development (TDD) practices using pytest.
+│
+│   Tests were written following Test-Driven Development (TDD) practices using pytest.
+│
+│   Covered areas:
+│
+│       User registration & login
+│       Authentication & authorization
+│       Sweets CRUD operations
+│       Inventory purchase & restock logic
+│       Role-based access validation
+│
+│   Run tests:
+│       cd backend
+│       pytest
+```
 
-    Covered areas:
-
-        User registration & login
-        Authentication & authorization
-        Sweets CRUD operations
-        Inventory purchase & restock logic
-        Role-based access validation
-
-        Run tests: cd backend
-                   pytest
 
 
 Screenshots
@@ -174,21 +189,30 @@ Screenshots
 
 
 
+## My AI Usage
+
+```text
 My AI Usage
------------
+----------
+
 AI Tools Used
-    ChatGPT (OpenAI)
-    Gemini
-
+│
+│   ChatGPT (OpenAI)
+│   Gemini
+│
 How I Used AI
-    To brainstorm API endpoint structure and REST conventions
-    To generate initial boilerplate for FastAPI routes and React components
-    To debug integration issues between frontend and backend
-    To refine test cases and validate TDD flow
-    To review code structure and improve readability and maintainability
-
+│
+│   To brainstorm API endpoint structure and REST conventions
+│   To generate initial boilerplate for FastAPI routes and React components
+│   To debug integration issues between frontend and backend
+│   To refine test cases and validate TDD flow
+│   To review code structure and improve readability and maintainability
+│
 My Reflection on AI Usage
-
-AI significantly accelerated development by reducing time spent on repetitive boilerplate and debugging.
-However, all AI-generated code was reviewed, modified, and validated manually to ensure correctness, security, and alignment with project requirements
-I treated AI as a collaborative assistant, not a replacement for engineering judgment.
+│
+│   AI significantly accelerated development by reducing time spent on repetitive boilerplate and debugging.
+│   However, all AI-generated code was reviewed, modified, and validated manually to ensure correctness,
+│   security, and alignment with project requirements.
+│
+│   I treated AI as a collaborative assistant, not a replacement for engineering judgment.
+```
