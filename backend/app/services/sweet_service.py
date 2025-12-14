@@ -5,33 +5,59 @@ from app.schemas.sweet import SweetCreate, SweetUpdate
 
 
 # CREATE
+# def create_sweet(db: Session, data: SweetCreate):
+#     sweet = Sweet(**data.dict())
+#     db.add(sweet)
+#     db.commit()
+#     db.refresh(sweet)
+#     return sweet
+
 def create_sweet(db: Session, data: SweetCreate):
-    sweet = Sweet(**data.dict())
+    sweet = Sweet(**data.model_dump())
     db.add(sweet)
     db.commit()
     db.refresh(sweet)
     return sweet
+
 
 # READ (LIST)
 def list_sweets(db: Session):
     return db.query(Sweet).all()
 
 # SEARCH
-def search_sweets(db: Session, name: str = None, category: str = None,
-                  min_price: float = None, max_price: float = None):
+# def search_sweets(db: Session, name: str = None, category: str = None,
+#                   min_price: float = None, max_price: float = None):
 
+#     query = db.query(Sweet)
+
+#     if name:
+#         query = query.filter(Sweet.name.ilike(f"%{name}%"))
+#     if category:
+#         query = query.filter(Sweet.category.ilike(category))
+#     if min_price is not None:
+#         query = query.filter(Sweet.price >= min_price)
+#     if max_price is not None:
+#         query = query.filter(Sweet.price <= max_price)
+
+#     return query.all()
+
+def search_sweets(db: Session, name=None, category=None, min_price=None, max_price=None):
     query = db.query(Sweet)
 
     if name:
         query = query.filter(Sweet.name.ilike(f"%{name}%"))
+
     if category:
-        query = query.filter(Sweet.category.ilike(category))
+        query = query.filter(Sweet.category.ilike(f"%{category}%"))
+
     if min_price is not None:
         query = query.filter(Sweet.price >= min_price)
+
     if max_price is not None:
         query = query.filter(Sweet.price <= max_price)
 
     return query.all()
+
 
 # UPDATE
 def update_sweet(db: Session, sweet_id: int, data: SweetUpdate):
