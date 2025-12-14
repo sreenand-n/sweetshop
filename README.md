@@ -34,24 +34,30 @@ Technical Highlights
     Clean commit history with AI co-author attribution
 
 
+## Tech Stack
+
+```text
 Tech Stack
 ----------
 
 Backend
-    Python
-    FastAPI
-    SQLAlchemy
-    PostgreSQL
-    Alembic
-    Pytest
-
+│
+│   Python
+│   FastAPI
+│   SQLAlchemy
+│   PostgreSQL
+│   Alembic
+│   Pytest
+│
 Frontend
-    React
-    TypeScript
-    Vite
-    Tailwind CSS
-    Axios
-    React Router
+│
+│   React
+│   TypeScript
+│   Vite
+│   Tailwind CSS
+│   Axios
+│   React Router
+
 
 
 Project Structure
